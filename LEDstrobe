@@ -12,3 +12,12 @@ Void loop(){
     delay(300);
     leds[i]=CRGB::White;
     leds[(NUM_LEDS-i)]=CRGB::White
+    }
+  for(int i=0;i<NUM_LEDS;i++){
+    leds[i]=CRGB::purple;
+    FastLED.show();
+    delay(300);
+    leds[i]=CRGB::Blue;
+    leds[(NUM_LEDS-i)]=CRGB::Blue
+    }
+  }
