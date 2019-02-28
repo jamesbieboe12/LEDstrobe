@@ -5,19 +5,19 @@ CRGB LEDS[NUM_LED];
 Void setup(){
   FastLED.addLED<WS28128.DATA_PIN>(LEDs, NUM_LEDS);
 }
-Void loop(){
+Void loop(){ .// this is for thepattern of the leds and how they will move with the different colors 
   for(int i=0;i<NUM_LEDS;i++){
     leds[i]=CRGB::Pink;
     FastLED.show();
-    delay(300);
+    delay(300); .// the delayis for the time in between the lighting of all of the LEDs in miliseconds  
     leds[i]=CRGB::White;
     leds[(NUM_LEDS-i)]=CRGB::White
-    }
+    } .// this is another loop inside the net loop for the second pattern that will be shown on the leds
   for(int i=0;i<NUM_LEDS;i++){
     leds[i]=CRGB::purple;
     FastLED.show();
     delay(300);
-    leds[i]=CRGB::Blue;
+    leds[i]=CRGB::Blue; .// this is the color that purple will change into whengoing around the leds 
     leds[(NUM_LEDS-i)]=CRGB::Blue
     }
   }
